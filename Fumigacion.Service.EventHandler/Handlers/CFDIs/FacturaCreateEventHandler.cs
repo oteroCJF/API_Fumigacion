@@ -311,7 +311,7 @@ namespace Fumigacion.Service.EventHandler.Handlers.CFDIs
 
                 facturas.Archivo = factura.XML.FileName;
 
-                facturas.Tipo = facturas.Receptor.UsoCFDI.Equals("G03") ? "Factura" : "NC";
+                facturas.Tipo = facturas.Comprobante.Serie.Equals("NCRE") ? "NC" : "Factura";
                 facturas.InmuebleId = factura.InmuebleId;
                 facturas.UsuarioId = factura.UsuarioId;
                 facturas.RepositorioId = factura.RepositorioId;
